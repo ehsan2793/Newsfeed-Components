@@ -36,20 +36,19 @@ const header = document.querySelector('.header')
 const menu = document.createElement('div');
 header.appendChild(menu);
 menu.classList.add('menu');
-
 const list = document.createElement('ul');
 menu.appendChild(list);
-
-function menuMaker(items) {
-
+function menuMaker(menutxt) {
 const menuItem = document.createElement('li');
+
 list.appendChild(menuItem);
-menuitem.textContent = items
+
+menuItem.textContent = menutxt
 
 return menuItem;
 }
 menuButton.addEventListener('click',event => {
-  menu.classlist.toggle('menu-open')
+  menu.classList.toggle('menu--open')
 })
 
 const newMenu = menuItems.map(item => {
@@ -58,3 +57,4 @@ const newMenu = menuItems.map(item => {
 newMenu.forEach(item => {
   list.appendChild(item)
 })
+
